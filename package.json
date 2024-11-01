@@ -18,10 +18,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "dev": "vite",
+    "dev": "vite",
   "build": "vite build",
-  "preview": "vite preview"
-},
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"  
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -38,5 +40,8 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
+  }
 }
